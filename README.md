@@ -25,4 +25,3 @@ This watchOS application allows users to find their nearest public locations. Th
 **Closing:**
 
 In conclusion, I have learned a lot by working on this project. I am confident that I mastered CoreLocation services while using WatchKit.
-#Wheres-My-Nearest
