@@ -21,7 +21,7 @@ class InterfaceController: WKInterfaceController {
         super.awake(withContext: context)
 
     let url = NSURL(string: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=500&types=food&name=cruise&key=AIzaSyDVQdPf1UBH6sbLmCtsRWoRIgsouboYeRo")
-        
+    
     let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
     if error == nil {
     var jsonResult: NSDictionary = JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions) as NSDictionary
