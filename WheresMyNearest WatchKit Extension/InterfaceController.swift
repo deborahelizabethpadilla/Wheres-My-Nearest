@@ -28,10 +28,13 @@ class InterfaceController: WKInterfaceController {
         
     print(jsonResult)
         
+    let returnedPlaces: NSArray? = jsonResult
+        
     } else {
     print(error)
     }
     }
+    task.resume()
     }
     
     override func willActivate() {
