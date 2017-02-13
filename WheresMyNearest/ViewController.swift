@@ -20,14 +20,15 @@ class ViewController: UIViewController {
     @IBOutlet var place4: UITextField!
     
     @IBAction func update(_ sender: Any) {
-        
+    places = [place1.text!, place2.text!, place3.text!, place4.text!]
+    defaults?.set(places, forKey: "places")
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-    var storedPlaces: AnyObject? = defaults?.object(forKey: "places") as AnyObject?
+    let storedPlaces: AnyObject? = defaults?.object(forKey: "places") as AnyObject?
         
     if let storedPlacesArray = storedPlaces as? NSArray {
     for (index, value) in storedPlacesArray.enumerated() {
@@ -42,6 +43,7 @@ class ViewController: UIViewController {
     }
     if places.count == 0 {
     places = ["cafe", "cinema", "library", "pub"]
+    defaults?.set(places, forKey: "places")
     }
     place1.text = places[0]
     place2.text = places[1]
