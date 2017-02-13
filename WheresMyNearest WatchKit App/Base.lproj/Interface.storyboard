@@ -36,6 +36,17 @@
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
         </scene>
+        <!--mapInterfaceContoller-->
+        <scene sceneID="y2W-RM-Q2M">
+            <objects>
+                <controller identifier="mapInterfaceContoller" id="vHC-GD-QzO" customClass="mapInterfaceController" customModule="WheresMyNearest_WatchKit_Extension">
+                    <items>
+                        <map height="147" alignment="left" id="3yE-yx-51x"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="470" y="347"/>
+        </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
             <objects>
