@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5060016A1E515E11007855DB /* tableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506001691E515E11007855DB /* tableRowController.swift */; };
 		509A35E11E440B3D00B9238D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509A35E01E440B3D00B9238D /* AppDelegate.swift */; };
 		509A35E31E440B3E00B9238D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509A35E21E440B3E00B9238D /* ViewController.swift */; };
 		509A35E61E440B3E00B9238D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 509A35E41E440B3E00B9238D /* Main.storyboard */; };
@@ -83,6 +84,7 @@
 /* Begin PBXFileReference section */
 		506001631E51434B007855DB /* WheresMyNearest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WheresMyNearest.entitlements; sourceTree = "<group>"; };
 		506001641E51443C007855DB /* WheresMyNearest WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WheresMyNearest WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		506001691E515E11007855DB /* tableRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = tableRowController.swift; path = ../tableRowController.swift; sourceTree = "<group>"; };
 		509A35DD1E440B3D00B9238D /* WheresMyNearest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WheresMyNearest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		509A35E01E440B3D00B9238D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		509A35E21E440B3E00B9238D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 			children = (
 				506001641E51443C007855DB /* WheresMyNearest WatchKit Extension.entitlements */,
 				509A361B1E440B4000B9238D /* InterfaceController.swift */,
+				506001691E515E11007855DB /* tableRowController.swift */,
 				509A361D1E440B4000B9238D /* ExtensionDelegate.swift */,
 				509A361F1E440B4100B9238D /* NotificationController.swift */,
 				509A36211E440B4100B9238D /* Assets.xcassets */,
@@ -469,6 +472,7 @@
 				509A36201E440B4100B9238D /* NotificationController.swift in Sources */,
 				509A361E1E440B4000B9238D /* ExtensionDelegate.swift in Sources */,
 				509A361C1E440B4000B9238D /* InterfaceController.swift in Sources */,
+				5060016A1E515E11007855DB /* tableRowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
