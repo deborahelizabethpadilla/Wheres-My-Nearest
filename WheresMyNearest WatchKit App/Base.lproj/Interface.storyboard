@@ -16,16 +16,22 @@
                     <items>
                         <table alignment="left" id="HHA-Yy-uJB">
                             <items>
-                                <tableRow identifier="tableRowController" id="3cZ-sT-Dxv" userLabel="tableRowController">
+                                <tableRow identifier="tableRowController" id="3cZ-sT-Dxv" customClass="tableRowController" customModule="WheresMyNearest_WatchKit_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="z4p-9w-eTO">
                                         <items>
                                             <label width="1" height="1" alignment="left" text="Label" id="3fS-yP-1gb"/>
                                         </items>
                                     </group>
+                                    <connections>
+                                        <outlet property="tableRowLabel" destination="3fS-yP-1gb" id="hAA-N8-77z"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
                     </items>
+                    <connections>
+                        <outlet property="table" destination="HHA-Yy-uJB" id="6y0-hV-9Qb"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
