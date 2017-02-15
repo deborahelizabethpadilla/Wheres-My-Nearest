@@ -11,6 +11,11 @@ import WatchKit
 
 class mapInterfaceController: WKInterfaceController {
     
+    var latitude:Double = 0
+    var longitude:Double = 0
+    
+    var placeName = ""
+    
     override func willActivate() {
         let url = NSURL(string: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=500&types=food&name=cruise&key=AIzaSyDVQdPf1UBH6sbLmCtsRWoRIgsouboYeRo")
         let task = URLSession.shared.dataTask(with: url) {
@@ -29,18 +34,19 @@ class mapInterfaceController: WKInterfaceController {
                             
                             if let name = returnedPlace["name"] as? NSString {
                                 
-                                print(name)
+                                self.placeName = name as String
+                                
                             }
                             
                             if let location = geometry["location"] as? NSDictionary {
                                 
                                 if let lat = location["lat"] as? Double {
                                     
-                                    print(lat)
+                                    self.latitude = lat
                                 }
                                 if let lng = location["lng"] as? Double {
                                     
-                                    print(lng)
+                                    self.longitude = lng
                                 }
                             }
                         }
@@ -49,6 +55,14 @@ class mapInterfaceController: WKInterfaceController {
                 
             } else {
                 print(error)
+            }
+            
+            if self.latitude != 0 && self.longitude != 0 && self.placeName != "" {
+                let location = CLLocationCoordinate2D(latitude: self.latitude as CLLocationDegrees, longitude: self.longitude as CLLocationDegrees)
+                
+                let span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
+                
+                let region = MKCoordinateRegion(center: location, span: span)
             }
         }
         task.resume()
