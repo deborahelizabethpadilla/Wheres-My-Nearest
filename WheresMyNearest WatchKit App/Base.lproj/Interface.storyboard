@@ -41,10 +41,12 @@
             <objects>
                 <controller identifier="mapInterfaceContoller" id="vHC-GD-QzO" customClass="mapInterfaceController" customModule="WheresMyNearest_WatchKit_Extension">
                     <items>
+                        <label width="1" alignment="left" text="Label" textAlignment="center" id="voE-Fk-40h"/>
                         <map width="136" height="140" alignment="center" verticalAlignment="bottom" id="3yE-yx-51x"/>
                     </items>
                     <connections>
                         <outlet property="map" destination="3yE-yx-51x" id="6dT-Qv-GHy"/>
+                        <outlet property="placeLabel" destination="voE-Fk-40h" id="JL9-EZ-PLm"/>
                     </connections>
                 </controller>
             </objects>

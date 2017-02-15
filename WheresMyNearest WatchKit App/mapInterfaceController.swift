@@ -11,7 +11,9 @@ import WatchKit
 
 class mapInterfaceController: WKInterfaceController {
     
+    @IBOutlet var placeLabel: WKInterfaceLabel!
     @IBOutlet var map: WKInterfaceMap!
+    
     var latitude:Double = 0
     var longitude:Double = 0
     
@@ -64,6 +66,10 @@ class mapInterfaceController: WKInterfaceController {
                 let span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
                 
                 let region = MKCoordinateRegion(center: location, span: span)
+                
+                self.map.setRegion(region)
+                
+                self.placeLabel.setText(self.placeName)
             }
         }
         task.resume()
