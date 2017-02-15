@@ -11,6 +11,7 @@ import WatchKit
 
 class mapInterfaceController: WKInterfaceController {
     
+    @IBOutlet var map: WKInterfaceMap!
     var latitude:Double = 0
     var longitude:Double = 0
     

@@ -41,8 +41,11 @@
             <objects>
                 <controller identifier="mapInterfaceContoller" id="vHC-GD-QzO" customClass="mapInterfaceController" customModule="WheresMyNearest_WatchKit_Extension">
                     <items>
-                        <map height="147" alignment="left" id="3yE-yx-51x"/>
+                        <map width="136" height="140" alignment="center" verticalAlignment="bottom" id="3yE-yx-51x"/>
                     </items>
+                    <connections>
+                        <outlet property="map" destination="3yE-yx-51x" id="6dT-Qv-GHy"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="470" y="347"/>
