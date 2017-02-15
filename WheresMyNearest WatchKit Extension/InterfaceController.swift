@@ -18,7 +18,8 @@ class InterfaceController: WKInterfaceController {
     var defaults = UserDefaults(suiteName: "group.com.Deborah.wheresMyNearest")
     
     override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
-        pushController(withName: "mapInterfaceController", context: nil)
+        
+        pushController(withName: "mapInterfaceController", context: places[rowIndex])
     }
     
     override func awake(withContext context: Any?) {

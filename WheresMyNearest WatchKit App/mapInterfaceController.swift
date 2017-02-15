@@ -19,14 +19,28 @@ class mapInterfaceController: WKInterfaceController {
     
     var placeName = ""
     
+    var placeType = ""
+    
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
+        
+        if context != nil {
+            
+            placeType = context as! String
+        }
+    }
+    
     override func willActivate() {
-        let url = NSURL(string: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=500&types=food&name=cruise&key=AIzaSyDVQdPf1UBH6sbLmCtsRWoRIgsouboYeRo")
+        super.willActivate()
+        
+        let url = NSURL(string: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=500&name=" + placeType + "&key=AIzaSyDVQdPf1UBH6sbLmCtsRWoRIgsouboYeRo")
         let task = URLSession.shared.dataTask(with: url) {
             (data, response, error) in
             if error == nil {
+                
                 var jsonResult: NSDictionary = JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions) as NSDictionary
                 
-                print(jsonResult)
+                
                 
                 let returnedPlaces: NSArray? = jsonResult
                 
