@@ -70,6 +70,8 @@ class mapInterfaceController: WKInterfaceController {
                 self.map.setRegion(region)
                 
                 self.placeLabel.setText(self.placeName)
+                
+                self.map.addAnnotation(location, with: WKInterfaceMapPinColor.red)
             }
         }
         task.resume()
