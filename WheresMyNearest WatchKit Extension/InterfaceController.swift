@@ -70,12 +70,17 @@ class InterfaceController: WKInterfaceController {
     override func willActivate() {
         super.willActivate()
         
+        var defaults = UserDefaults(suiteName: "group.com.wheresMyNearest")
+        
+        places = []
+        
         let storedPlaces: AnyObject? = defaults?.object(forKey: "places") as AnyObject?
         
         if let storedPlacesArray = storedPlaces as? NSArray {
             for (index, value) in storedPlacesArray.enumerated() {
                 
                 if let placeName = value as? String {
+                    
                     places.append(placeName)
                     
                 }
