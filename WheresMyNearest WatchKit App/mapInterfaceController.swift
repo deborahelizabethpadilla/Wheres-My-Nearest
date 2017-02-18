@@ -41,9 +41,10 @@ class mapInterfaceController: WKInterfaceController, CLLocationManagerDelegate {
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         
-        let url = NSURL(string: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(locationManager.location?.coordinate.latitude),\(locationManager.location?.coordinate.longitude)&radius=2000&name=" + placeType + "&key=AIzaSyDVQdPf1UBH6sbLmCtsRWoRIgsouboYeRo")
+        let url1 = NSURL(string: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(locationManager.location?.coordinate.latitude),\(locationManager.location?.coordinate.longitude)&radius=2000&name=" + placeType + "&key=AIzaSyDVQdPf1UBH6sbLmCtsRWoRIgsouboYeRo")
         
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+        let task = URLSession.shared.dataTask(with: url1) { (data, response, error) in
+        
             
             if error == nil {
                 
