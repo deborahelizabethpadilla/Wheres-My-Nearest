@@ -25,10 +25,13 @@ class InterfaceController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        let url = NSURL(string: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=500&types=food&name=cruise&key=AIzaSyDVQdPf1UBH6sbLmCtsRWoRIgsouboYeRo")
-        let task = URLSession.shared.dataTask(with: url) {
-            (data, response, error) in
+        let url1 = URL(string: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=500&types=food&name=cruise&key=AIzaSyDVQdPf1UBH6sbLmCtsRWoRIgsouboYeRo")
+        let task = URLRequest(url: url1!)
+            
+            URLSession.shared.dataTask(with: task) {data, response, error in
+                print("Entered the completionHandler")
             if error == nil {
+                
                 var jsonResult: NSDictionary = JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions) as NSDictionary
                 
                 print(jsonResult)
@@ -61,12 +64,16 @@ class InterfaceController: WKInterfaceController {
                 }
                 
             } else {
-                print(error)
+                print(error!)
+                
             }
-        }
-        task.resume()
+        
+                 task.resume()
+    }
+       
     }
     
+
     override func willActivate() {
         super.willActivate()
         
@@ -110,4 +117,4 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
     
-}
+    }
