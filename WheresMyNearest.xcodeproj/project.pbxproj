@@ -24,6 +24,7 @@
 		509A361E1E440B4000B9238D /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509A361D1E440B4000B9238D /* ExtensionDelegate.swift */; };
 		509A36201E440B4100B9238D /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509A361F1E440B4100B9238D /* NotificationController.swift */; };
 		509A36221E440B4100B9238D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 509A36211E440B4100B9238D /* Assets.xcassets */; };
+		50BD37171E5811C100B6D546 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50BD37161E5811C100B6D546 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,7 @@
 		509A361F1E440B4100B9238D /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		509A36211E440B4100B9238D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		509A36231E440B4100B9238D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50BD37161E5811C100B6D546 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50BD37171E5811C100B6D546 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +157,7 @@
 				509A36091E440B4000B9238D /* WheresMyNearest WatchKit App */,
 				509A36181E440B4000B9238D /* WheresMyNearest WatchKit Extension */,
 				509A35DE1E440B3D00B9238D /* Products */,
+				50BD37151E5811C100B6D546 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -233,6 +237,14 @@
 				509A361A1E440B4000B9238D /* PushNotificationPayload.apns */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		50BD37151E5811C100B6D546 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				50BD37161E5811C100B6D546 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
