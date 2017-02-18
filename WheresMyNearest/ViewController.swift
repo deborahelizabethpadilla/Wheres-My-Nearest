@@ -27,10 +27,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         defaults?.set(places, forKey: "places")
     }
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-        print(locations)
-    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +35,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
+        
         
         let storedPlaces: AnyObject? = defaults?.object(forKey: "places") as AnyObject?
         

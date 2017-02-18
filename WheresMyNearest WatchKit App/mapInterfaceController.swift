@@ -8,8 +8,9 @@
 
 import UIKit
 import WatchKit
+import CoreLocation
 
-class mapInterfaceController: WKInterfaceController {
+class mapInterfaceController: WKInterfaceController, CLLocationManagerDelegate {
     
     @IBOutlet var placeLabel: WKInterfaceLabel!
     @IBOutlet var map: WKInterfaceMap!
@@ -20,6 +21,8 @@ class mapInterfaceController: WKInterfaceController {
     var placeName = ""
     
     var placeType = ""
+    
+    var locationManager = CLLocationManager()
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -32,6 +35,11 @@ class mapInterfaceController: WKInterfaceController {
     
     override func willActivate() {
         super.willActivate()
+        
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
         
         let url = NSURL(string: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=500&name=" + placeType + "&key=AIzaSyDVQdPf1UBH6sbLmCtsRWoRIgsouboYeRo")
         let task = URLSession.shared.dataTask(with: url) {
